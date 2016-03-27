@@ -1,5 +1,8 @@
 import angular from 'angular'
 
+import templateDashboard from './templates/dashboard.html'
+import templateTables from './templates/tables.html'
+
 const MODULE_NAME = 'app.core.routes'
 
 const app = angular.module(MODULE_NAME, [])
@@ -7,11 +10,11 @@ const app = angular.module(MODULE_NAME, [])
 app.config(($stateProvider) => $stateProvider
   .state('index', {
     url: '/',
-    template: '<h1>Dashboard!</h1>'
+    templateUrl: templateDashboard
   })
   .state('tables', {
     url: '/tables',
-    template: '<h1>Tables!</h1>'
+    templateUrl: templateTables
   })
 )
 

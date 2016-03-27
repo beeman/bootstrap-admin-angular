@@ -117,11 +117,11 @@ module.exports = function makeWebpackConfig () {
       test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       loader: 'file-loader'
     }, {
-      // HTML LOADER
-      // Reference: https://github.com/webpack/raw-loader
-      // Allow loading html through js
+      // NGTEMPLATE LOADER
+      // Reference: https://github.com/WearyMonkey/ngtemplate-loader
+      // Allow loading of Angular HTML templates through js
       test: /\.html$/,
-      loader: 'raw'
+      loader: 'ngtemplate!html'
     } ]
   }
 
@@ -164,7 +164,7 @@ module.exports = function makeWebpackConfig () {
     // Render index.html
     config.plugins.push(
       new HtmlWebpackPlugin({
-        template: './src/public/index.html',
+        template: './src/public/index.html.template',
         inject: 'body'
       }),
 

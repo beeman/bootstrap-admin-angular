@@ -51,3 +51,4 @@ Icon
 .idea
 
 coverage/
+npm-debug.log
