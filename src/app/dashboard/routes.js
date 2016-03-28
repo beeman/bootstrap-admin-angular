@@ -15,6 +15,8 @@ app.config(($stateProvider) => $stateProvider
   })
   .state('app.dashboard.index', {
     url: '',
+    controller: 'DashboardCtrl',
+    controllerAs: 'ctrl',
     templateUrl: templateDashboard
   })
   .state('app.dashboard.tables', {

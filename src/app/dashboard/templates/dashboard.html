@@ -1,6 +1,19 @@
-<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
-    <div class="col-xs-12">
-        <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+<div class="row" ng-show="ctrl.alerts.length">
+  <div class="col-md-12">
+    <uib-alert data-ng-repeat="alert in ctrl.alerts" type="{{alert.type}}" close="ctrl.closeAlert($index)">
+      {{alert.msg}}
+    </uib-alert>
+
+
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="ctrl.alert.msg" placeholder="Type your message here!">
+        <span class="input-group-btn">
+          <input type="submit" ng-click="ctrl.addAlert()" class="btn btn-default" value="Send">
+        </span>
+      </div>
     </div>
+  </div>
+
 </div>
 
