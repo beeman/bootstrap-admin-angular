@@ -1,13 +1,11 @@
 import angular from 'angular'
 
-import './controllers/alerts'
-import './controllers/master'
+import './controllers/app'
 
 const MODULE_NAME = 'app.core.controllers'
 
 angular.module(MODULE_NAME, [
-  'app.core.controllers.alerts',
-  'app.core.controllers.master'
+  'app.core.controllers.app'
 ])
 
 export default MODULE_NAME

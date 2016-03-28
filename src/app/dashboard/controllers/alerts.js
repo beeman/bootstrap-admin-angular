@@ -16,7 +16,7 @@ function AlertsCtrl ($scope) {
   $scope.closeAlert = (index) => $scope.alerts.splice(index, 1)
 }
 
-const MODULE_NAME = 'app.core.controllers.alerts'
+const MODULE_NAME = 'app.dashboard.controllers.alerts'
 
 angular.module(MODULE_NAME, [])
   .controller('AlertsCtrl', AlertsCtrl)

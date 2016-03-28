@@ -1,23 +1,21 @@
 import angular from 'angular'
 
-import templateDashboard from './templates/dashboard.html'
-import templateTables from './templates/tables.html'
+import templateApp from './templates/app.html'
 
 const MODULE_NAME = 'app.core.routes'
 
 const app = angular.module(MODULE_NAME, [])
 
 app.config(($stateProvider) => $stateProvider
-  .state('index', {
-    url: '/',
-    templateUrl: templateDashboard
-  })
-  .state('tables', {
-    url: '/tables',
-    templateUrl: templateTables
+  .state('app', {
+    url: '',
+    abstract: true,
+    controller: 'AppCtrl',
+    controllerAs: 'app',
+    templateUrl: templateApp
   })
 )
 
-app.config(($urlRouterProvider) => $urlRouterProvider.otherwise('/'))
+app.config(($urlRouterProvider) => $urlRouterProvider.otherwise('/dashboard'))
 
 export default MODULE_NAME

@@ -30,7 +30,7 @@ function MasterCtrl ($scope, $cookieStore) {
   }
 }
 
-const MODULE_NAME = 'app.core.controllers.master'
+const MODULE_NAME = 'app.dashboard.controllers.master'
 
 angular.module(MODULE_NAME, [])
   .controller('MasterCtrl', MasterCtrl)
