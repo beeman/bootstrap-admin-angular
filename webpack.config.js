@@ -121,6 +121,9 @@ module.exports = function makeWebpackConfig () {
       // Reference: https://github.com/WearyMonkey/ngtemplate-loader
       // Allow loading of Angular HTML templates through js
       test: /\.html$/,
+      exclude: [
+        /\.template\.html/
+      ],
       loader: 'ngtemplate!html'
     } ]
   }
@@ -164,7 +167,7 @@ module.exports = function makeWebpackConfig () {
     // Render index.html
     config.plugins.push(
       new HtmlWebpackPlugin({
-        template: './src/public/index.html.template',
+        template: './src/public/index.template.html',
         inject: 'body'
       }),
 
