@@ -1,4 +1,4 @@
-# bootstrap-admin-ui
+# bootstrap-admin-angular
 
 Fork of [rdash/rdash-angular](https://github.com/rdash/rdash-angular) converted to ES6/webpack using [preboot/angular-webpack](https://github.com/preboot/angular-webpack).
 
