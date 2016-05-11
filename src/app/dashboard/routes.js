@@ -2,6 +2,7 @@ import angular from 'angular'
 
 import templateDashboard from './templates/dashboard.html'
 import templateTables from './templates/tables.html'
+import templatePanels from './templates/panels.html'
 
 const MODULE_NAME = 'app.dashboard.routes'
 
@@ -22,6 +23,21 @@ app.config(($stateProvider) => $stateProvider
   .state('app.dashboard.tables', {
     url: '/tables',
     templateUrl: templateTables
+  })
+  .state('app.dashboard.panels', {
+    url: '/panels',
+    templateUrl: templatePanels,
+    controllerAs: 'ctrl',
+    controller: function panelCtrl() {
+      this.panels = [
+        { type: 'default' },
+        { type: 'primary' },
+        { type: 'success' },
+        { type: 'info' },
+        { type: 'warning' },
+        { type: 'danger' },
+      ]
+    }
   })
 )
 

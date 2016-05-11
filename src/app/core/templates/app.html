@@ -10,11 +10,14 @@
         </a>
       </li>
       <li class="sidebar-title"><span>NAVIGATION</span></li>
-      <li class="sidebar-list">
+      <li ui-sref-active="active" class="sidebar-list">
         <a href="" ui-sref="app.dashboard.index">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
       </li>
-      <li class="sidebar-list">
+      <li ui-sref-active="active" class="sidebar-list">
         <a href="" ui-sref="app.dashboard.tables">Tables <span class="menu-icon fa fa-table"></span></a>
+      </li>
+      <li ui-sref-active="active" class="sidebar-list">
+        <a href="" ui-sref="app.dashboard.panels">Panels <span class="menu-icon fa fa-columns"></span></a>
       </li>
     </ul>
     <div class="sidebar-footer">
@@ -92,7 +95,7 @@
             </div>
           </div>
           <div class="meta">
-            <div class="page">
+            <div class="title">
               Dashboard
             </div>
             <div class="breadcrumb-links">
